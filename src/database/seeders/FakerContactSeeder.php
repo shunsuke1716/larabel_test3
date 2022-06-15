@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Contact;
 use Illuminate\Database\Seeder;
 
-class UsersTableSeeder extends Seeder
+class FakerContactSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +14,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(User::class, 35)->create();
+        Contact::factory()->count(35)->create();
     }
 }
